@@ -5,6 +5,11 @@ var query = process.argv.slice(2);
 var thequery="";
 //console.log(process.argv.length);
 var googleQuerySearch=""
+
+var command = process.platform === "win32" ? "cmd" :
+                  process.platform === "darwin" ? "open" :
+                  "xdg-open";
+
 if(query[0]=="-m")
 {
 	query = query.slice(1);
@@ -20,4 +25,4 @@ for (i=0;i<query.length;i++)
 //console.log("open "+thequery);
 
 var exec = require('child_process').exec;
-var child = exec('opener ' + googleQuerySearch+encodeURIComponent(thequery).replace(/%20/g,'+'));
+var child = exec(command + ' ' + googleQuerySearch+encodeURIComponent(thequery).replace(/%20/g,'+'));

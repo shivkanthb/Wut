@@ -1,14 +1,11 @@
 {
   "name": "node-wut",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "cross platform google query and map search. ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "preferGlobal": true,
-  "dependencies":{
-  	"opener":"1.4.1"
-  	},
 	"bin": {
     "search": "index.js"
   },
